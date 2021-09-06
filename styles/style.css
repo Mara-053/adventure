@@ -16,20 +16,42 @@ div {
 }
 header {
     background: url(../images/head.jpg) no-repeat center top / cover;
-    height: 600px;
+    padding: 10px 0;
 }
-.container { /*Размер контейнера*/
-    width: 930px;
+.logo {
+    width: 60px;
+    height: 60px;
+}
+.header-container { /*Размер контейнера*/
+    width: 90%;/*90 относительно экрана*/
     margin: 0 auto;
+    display: flex;/*Чтобы начать работать с CSS Flexbox*/
+    justify-content: space-between;/*Отвечает за выравнивание элементов по главной оси*/
+}
+.header-container a{
+    font-size: 16px;
+    margin-right: 63px;
+    padding: 16px 6px;
+}
+.header-container a:hover{
+    background: rgb(95, 94, 92);
+    border-radius: 3px;
 }
 nav { 
     float: right;/*Выравнивание по правому краю*/
-    margin-top: 40px;/*отступ сверху*/
+    margin-top: 3%;/*отступ сверху*/
+}
+#menu-checkbox{
+    display: none;
 }
 .menu {/*Размер контейнера*/
     padding: 0;
     margin: 0;
     display: block;
+}
+li{
+    list-style: none;
+    display: flex;
 }
 .menu li {/*Размер контейнера*/
     float: left;
@@ -37,17 +59,17 @@ nav {
     margin-right: 41px;
 }
 .menu li a {
-    color: rgb(255, 253, 253);
+    color: rgb(255, 255, 255);
     text-decoration: none;/*Отмена встроенных декораций*/
     text-transform: uppercase;/*Изменение шрифта*/
     font-size: 14px;/*Расстояние между друг другом*/
 }
-.bigtitles {
+.bigtitles{
     color: rgb(255, 253, 253);
     text-transform: uppercase;/*Изменение шрифта*/
     font-size: 40px;/*Расстояние между друг другом*/
     text-align: center;/*Выравнивание по центру*/
-    margin-top: 180px;
+    margin-block-start: 15%;
 }
 
 h1 {
@@ -56,10 +78,10 @@ h1 {
     text-transform: uppercase;/*Изменение шрифта*/
     font-size: 20px;/*Расстояние между друг другом*/
     text-align: center;/*Выравнивание по центру*/
-    margin: 15;
+    margin-block-end: 5%;
 }
 
-.button {
+header a.button {
     background: rgb(95, 94, 92);
     color: rgb(45, 73, 66);
     border-radius: 3px;
@@ -71,10 +93,10 @@ h1 {
     text-align: center;
     text-transform: uppercase;
     font-size: 18px;
-    margin-top: 60px;
+    margin-block-end: 15%;
 }
 .title {
-    padding-top: 90px;
+    padding-top: 8%;
 
 }
 .title h2 {
@@ -94,7 +116,10 @@ h1 {
     margin: 1px;
 }
 .services{
-    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 15%;
+
 }
 .services-item{
     width: 270px;
@@ -114,9 +139,84 @@ h1 {
     color: rgb(48, 54, 52);
     font-size: 14px;
 }
-.services-item:last-child {
-    float: right;
+.seazon{
+    background-color: rgba(170, 170, 170, 0.411);
+    background-size: cover;
+    text-align: center;
 }
-.services-item:nth-child(2){
-    margin-left: 55px;
+.seazon h4{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(32, 63, 31);
+    text-transform: uppercase;/*Изменение шрифта*/
+    font-size: 30px;/*Расстояние между друг другом*/
+    text-align: center;/*Выравнивание по центру*/
+    padding: 20px 12px;
+    margin: 0;
+   }
+   .seazon button {
+       border: none;
+       color: rgb(17, 63, 66);
+       cursor: pointer;
+       font-size: 16px;
+       margin: 20px 5px;
+   }
+   .icon2{
+       margin: 10px 1px;
+   }
+@media screen and (max-width: 420px) {
+    .header-container{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;/*Равномерно распределяет элементы по ширине*/
+    }
+    .menu{
+        display: none;
+    }
+    .menu li{
+        width: 100%;
+        display: block;
+        font-size: 12px;
+    }
+    .menu a{
+        display: block;
+        padding: 8px;
+    }
+    .bigtitles{
+        margin-top: 150px;
+    }
+    .toggle-button{
+        text-align: center;
+        display: block;
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        margin-top: 10px;
+    }
+    .toggle-button:after{/*обращаемся к атрибуду data-open*/
+        content: attr(data-open);
+        display: block;
+    }
+    #menu-checkbox:checked + nav[role="navigation"] .menu{/*Значёк переключателя*/
+        display: block;
+    }
+    #menu-checkbox:checked + nav[role="navigation"] .toggle-button:after{
+        content: attr(data-close);
+    }
+    .header-container a{
+        margin-right: -65px;
+    }
+    .menu{
+        position: fixed;/*Чтобы не прыгало меню*/
+        top: 95px;
+        right: 15px;
+    }
+    .services{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 15%;
+    }
+    .services-item p{
+    margin-block-end: 20%;
+    }
 }
+

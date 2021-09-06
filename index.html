@@ -1,137 +1,146 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Время путешествий</title>
     <link href="styles/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  </head>
-  <body>
-        <header>
-            <div class="container">
-               <div class="heading clearfix">
-                    <nav> 
-                        <ul class="menu">
-                            <li>
-                                <a href="#">О нас</a>  
-                            </li>
-                            <li>
-                            <a href="#">Отзывы</a> 
-                            </li>
-                            <li>
-                            <a href="#">Контакты</a>  
-                            </li>
-                        </ul>
-                    </nav>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img class="logo" src="images/log.png" alt="logo">
+            <input type="checkbox" id="menu-checkbox">
+            <nav role="navigation">
+                <label for="menu-checkbox" class="toggle-button" data-open="МЕНЮ" data-close="ЗАКРЫТЬ" onclick></label>
+                <ul class="menu">
+                    <li>
+                        <a href="#">О нас</a>
+                    </li>
+                    <li>
+                        <a href="#">Отзывы</a>
+                    </li>
+                    <li>
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+        <div class="titles">
+            <div class="bigtitles">
+                Коллекция путешествий 2021 - 2022
+            </div>
+            <h1>
+                Разбуди в себе путешественника
+            </h1>
+        </div>
+        <a class="button" href="./about.html">Узнать больше</a>
+    </header>
+    <section>
+        <div class="container">
+            <div class="title">
+                <h2>
+                    Услуги
+                </h2>
+                <p>
+                    Выбери что тебе по душе
+                </p>
+            </div>
+            <div class="services">
+                <div class="services-item">
+                    <img class="icon" src="images/icon1.jpg" alt="Услуга">
+                    <h3>Авиабилеты</h3>
+                    <p>Для тех кто любит скорость</p>
+                </div>
+                <div class="services-item">
+                    <img class="icon" src="images/icon2.png" alt="Услуга">
+                    <h3>Ждбилеты</h3>
+                    <p>Для тех кто любит атмосферу</p>
+                </div>
+                <div class="services-item">
+                    <img class="icon" src="images/icon3.jpg" alt="Услуга">
+                    <h3>Авиамаршруты</h3>
+                    <p>Для тех кто любит быть хозяином положения</p>
                 </div>
             </div>
-            <div class="titles">
-                <div class="bigtitles">
-                    Коллекция путешествий 2021 - 2022
-                </div>
-                <h1>
-                    Разбуди в себе путешественника
-                </h1>
+        </div>
+    </section>
+    <section class="seazon">
+        <h4>ВЫБЕРИТЕ СЕЗОН</h4>
+            <div class="button">
+                <button id="winter">ЗИМА</button>
+                <button id="spring">ВЕСНА</button>
+                <button id="summer">ЛЕТО</button>
+                <button id="autumn">ОСЕНЬ</button>
             </div>
-            <a class="button" href="./about.html">Узнать больше</a>
-        </header>
-        <section>
-            <div class="container">
-                <div class="title">
-                    <h2>
-                        Услуги
-                    </h2>
-                    <p>
-                        Выбери что тебе по душе
-                    </p>
-                </div>
-                <div class="services clearfix">
-                    <div class="services-item">
-                        <img class="icon" src="images/icon1.jpg" alt="Услуга">
-                        <h3>Авиабилеты</h3>
-                        <p>Для тех кто любит скорость</p>
-                    </div>
-                    <div class="services-item">
-                        <img class="icon" src="images/icon2.png" alt="Услуга">
-                        <h3>Ждбилеты</h3>
-                        <p>Для тех кто любит атмосферу</p>
-                    </div>
-                    <div class="services-item">
-                        <img class="icon" src="images/icon3.jpg" alt="Услуга">
-                        <h3>Авиамаршруты</h3>
-                    <p>Для тех кто любит быть хозяином положения</p> 
-                    </div>
-                </div>
+            <div class="services-item">
+                <img class="icon2" src="images/1.jpg" alt="Февраль-Март">
+                <h3>Февраль-Март</h3>
             </div>
-        </section>
-        <section>
-            <div class="container">
-                <div class="services clearfix">
-                    <div class="services-item">
-                        <img class="icon" src="images/1.jpg" alt="Февраль-Март">
-                        <h3>Февраль-Март</h3>
-                    </div>
-                    <div class="services-item">
-                        <img class="icon" src="images/2.jpg" alt="Апрель-Май">
-                        <h3>Апрель-Май</h3>
-                    </div>
-                    <div class="services-item">
-                        <img class="icon" src="images/3.jpg" alt="Июнь-Июль">
-                        <h3>Июнь-Июль</h3>
-                    </div>
-                    <div class="services-item">
-                        <img class="icon" src="images/4.jpg" alt="Август-Сентябрь">
-                        <h3>Август-Сентябрь</h3>
-                    </div>
-                    <div class="services-item">
-                        <img class="icon" src="images/5.jpg" alt="Октябрь-Ноябрь">
-                        <h3>Октябрь-Ноябрь</h3>
-                    </div>
-                    <div class="services-item">
-                        <img class="icon" src="images/6.jpg" alt="Декабрь-Январь">
-                        <h3>Декабрь-Январь</h3>
-                    </div>
-                </div>
+            <div class="services-item">
+                <img class="icon2" src="images/2.jpg" alt="Апрель-Май">
+                <h3>Апрель-Май</h3>
             </div>
-        </section>
-        <section>
-            <div class="container">
-                
+            <div class="services-item">
+                <img class="icon2" src="images/3.jpg" alt="Июнь-Июль">
+                <h3>Июнь-Июль</h3>
             </div>
-        </section>
-        <section>
-            <div class="container">
-                
+            <div class="services-item">
+                <img class="icon2" src="images/4.jpg" alt="Август-Сентябрь">
+                <h3>Август-Сентябрь</h3>
             </div>
-        </section>
-        <section>
-            <div class="container">
-                
+            <div class="services-item">
+                <img class="icon2" src="images/5.jpg" alt="Октябрь-Ноябрь">
+                <h3>Октябрь-Ноябрь</h3>
             </div>
-        </section>
-        <section>
-            <div class="container">
-                
+            <div class="services-item">
+                <img class="icon2" src="images/6.jpg" alt="Декабрь-Январь">
+                <h3>Декабрь-Январь</h3>
             </div>
-        </section>
-        <section>
-            <div class="container">
-                
-            </div>
-        </section>
-        <section>
-            <div class="container">
-                
-            </div>
-        </section>
-        <footer>
-            <div class="container">
-                
-            </div>
-        </footer>
+    </section>
+    <section>
+        <div class="container">
+
+        </div>
+    </section>
+    <section>
+        <div class="container">
+
+        </div>
+    </section>
+    <section>
+        <div class="container">
+
+        </div>
+    </section>
+    <section>
+        <div class="container">
+
+        </div>
+    </section>
+    <section>
+        <div class="container">
+
+        </div>
+    </section>
+    <section>
+        <div class="container">
+
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+
+        </div>
+    </footer>
 
     <p>Подписывайтесь на наш <a href="https://vk.com/marina_svobodina" title="VK" target="_blank">Вк</a></p>
-    <button>Change user</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="scripts/main.js"></script>
-  </body>
+</body>
+
 </html>
